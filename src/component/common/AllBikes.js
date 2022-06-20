@@ -122,7 +122,7 @@ const AllBike = () => {
                     data?.map((val, key) => (
                       <div id={key}>
 
-                        <div className="card" style={{ width: "30rem", margin: "5px", height: "10.5rem" }}>
+                        <div className="card" style={{ width: "30rem", margin: "5px", height: "11.5rem" }}>
                           <h5 className="card-title text-center">Model:{val.Model}</h5>
                           <div className="card-body d-flex justify-content-between">
                             <div className='left'>
