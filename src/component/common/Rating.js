@@ -60,7 +60,7 @@ const Rating = ({ BikeRating, Rate, id, active, bikeID, userID }) => {
     }
     const check2 = () => {
         const valid = true
-        if (Rate === 0 && loc === "/" && userID === user?._id) {
+        if (Rate === 0 && path !== "allrerversations" ) {
             return valid;
         } else {
             return
