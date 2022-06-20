@@ -4,8 +4,8 @@ import DataContext from '../context/UserContext'
 import starGray from "../img/Graystar.svg"
 import starYellow from "../img/YellowStar.svg"
 
-const Rating = ({ BikeRating, Rate, id, active, bikeID ,userID }) => {
-    const {user, setReserveRating, setBikeRating } = useContext(DataContext);
+const Rating = ({ BikeRating, Rate, id, active, bikeID, userID }) => {
+    const { user, setReserveRating, setBikeRating } = useContext(DataContext);
 
     let [rating, setrating] = useState();
     const [stars, setStars] = useState(0);
@@ -47,10 +47,12 @@ const Rating = ({ BikeRating, Rate, id, active, bikeID ,userID }) => {
         }
     }
     const loc = window.location.pathname
+    console.log("loc", loc)
     const path = loc.substring(1, 17);
+    console.log("path", path)
     const check = () => {
         const valid = true
-        if (Rate === 0 && active === true && path === "allrerversations" && userID===user?._id) {
+        if (Rate === 0 && active === true && path === "allrerversations" && userID === user?._id) {
             return valid;
         } else {
             return
@@ -58,7 +60,7 @@ const Rating = ({ BikeRating, Rate, id, active, bikeID ,userID }) => {
     }
     const check2 = () => {
         const valid = true
-        if (Rate === 0 && loc === "/"  && userID===user?._id) {
+        if (Rate === 0 && loc === "/" && userID === user?._id) {
             return valid;
         } else {
             return
