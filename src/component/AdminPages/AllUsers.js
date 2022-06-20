@@ -10,12 +10,11 @@ const AllUsers = () => {
 
   const [Users, setUsers] = useState([]);
   const [Delete,setdeleted] = useState(false);
-  const [Users1, setUsers1] = useState([]);
 
   const handelDelete = (id) => {
     setdeleted(true)
     if (window.confirm("Do you really want to delete") === true) {
-      axios.delete(`http://localhost:5000/auth/deleteuser/${id}`)
+      axios.delete(`https://server-bike.herokuapp.com/auth/deleteuser/${id}`)
         .then(res => {
           setdeleted(false)
           console.log(res)
@@ -27,19 +26,13 @@ const AllUsers = () => {
   useEffect(() => {
     const getdata = async () => {
 
-      await axios.get('http://localhost:5000/auth/users')
+      await axios.get('https://server-bike.herokuapp.com/auth/users')
         .then(res => setUsers(res.data))
         .catch(err => console.log("err", err))
 
     }
     if (Users.length === 0) getdata();
-    const filterData = async () => {
-      const filter = Users?.filter((key) => {
-        return key.Role === "user";
-      })
-      setUsers1(filter)
-    }
-    if (Users) filterData()
+  
 
   }, [Users, Delete]);
 

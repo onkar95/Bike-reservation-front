@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const Addbike = () => {
-    const [Rating, setRating] = useState('')
     const [Model, setModel] = useState('')
     const [Location, setLocation] = useState('')
     const [Color, setColor] = useState('')
@@ -19,7 +18,7 @@ const Addbike = () => {
             Location: Location,
             Color: Color,
         }
-        axios.post('http://localhost:5000/auth/addBike', dataobj)
+        axios.post('https://server-bike.herokuapp.com/auth/addBike', dataobj)
             .then((res) => {
                 console.log(res)
                 alert("success")

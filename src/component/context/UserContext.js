@@ -16,7 +16,7 @@ export const DataProvider = ({ children }) => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        axios.get(`http://localhost:5000/auth/verifyuser`, {
+        axios.get(`https://server-bike.herokuapp.com/auth/verifyuser`, {
           headers: {
             'x-access-token': localStorage.getItem('token'),
           }

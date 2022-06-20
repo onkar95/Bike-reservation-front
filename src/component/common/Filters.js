@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import DataContext from '../context/UserContext';
 
 const Filters = ({ filteredData, setFiltered }) => {

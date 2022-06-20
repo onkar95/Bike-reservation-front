@@ -61,40 +61,12 @@ const BikeDetails = () => {
         }
         fetchData()
     }, [id, id1]);
-    const AddReview = () => {
-        if (rating >= 1 && rating <= 5) setreviews([...reviews, { Username: user?.name, UserID: user?._id, Rating: rating, id: reviews.length + 1 }])
-        setRating(0)
-    }
+ 
 
     const handleEdit = (val) => {
         setEdit(true);
         setEditValue(val)
         setRating(val.Rating)
-    }
-    const handelCancle = () => {
-        setEdit(false);
-        setRating(0)
-    }
-    const handelUpdate = () => {
-        console.log("editValue", editValue)
-        console.log("selectEdit", editValue.Rating)
-        setRating(editValue.Rating = rating)
-        // reviews.slice(editValue.id, 1, editValue)
-
-        let newObj =
-        {
-            Rating: editValue.Rating,
-            id: editValue.id,
-            Username: "resta1",
-            UserID: "resta1",
-
-        }
-        let index = reviews.indexOf(editValue);
-        let newArr = [...reviews.slice(0, index), newObj, ...reviews.slice(index + 1)];
-        setreviews(newArr);
-        setEdit(false);
-        setRating(0)
-        // setreviews()
     }
 
     const handleDelete = (val) => {

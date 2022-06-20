@@ -13,7 +13,7 @@ const EditBike = () => {
     const { id } = useParams()
     
     const fetchData = async () => {
-        await axios.get(`http://localhost:5000/auth/Singlebike/${id}`)
+        await axios.get(`https://server-bike.herokuapp.com/auth/Singlebike/${id}`)
             .then(res => {
                 console.log(res.data)
                 setOldData(true)
@@ -41,7 +41,7 @@ const EditBike = () => {
             Color: Color,
             Availability: Availability,
         }
-        axios.put(`http://localhost:5000/auth/updateBike/${id}`, dataobj)
+        axios.put(`https://server-bike.herokuapp.com/auth/updateBike/${id}`, dataobj)
             .then((res) => {
                 console.log(res)
                 alert("success")

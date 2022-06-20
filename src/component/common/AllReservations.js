@@ -12,14 +12,14 @@ const AllReservations = () => {
     const [AllReservations, setAllReservations] = useState();
     const [FilteredReservations, setFilteredReservations] = useState(AllReservations);
     useEffect(() => {
-        axios.get(`http://localhost:5000/auth/reservations`)
+        axios.get(`https://server-bike.herokuapp.com/auth/reservations`)
             .then(res => {
                 setAllReservations(res.data)
             })
             .catch(err => console.log(err))
     }, [cancel, ReserveRating]);
     useEffect(() => {
-        axios.get(`http://localhost:5000/auth/reservations?_sort=${"Active"}&_order=dsc`)
+        axios.get(`https://server-bike.herokuapp.com/auth/reservations?_sort=${"Active"}&_order=dsc`)
             .then(res => {
                 console.log("sorted",res.data)
                 setAllReservations(res.data)
@@ -39,7 +39,7 @@ const AllReservations = () => {
     const UpdateAvailability = async (BId) => {
 
         const dataobj = { Availability: "avl" }
-        axios.put(`http://localhost:5000/auth/updateBike/${BId}`, dataobj)
+        axios.put(`https://server-bike.herokuapp.com/auth/updateBike/${BId}`, dataobj)
             .then((res) => {
                 console.log(res)
             })
@@ -52,7 +52,7 @@ const AllReservations = () => {
             const obj = {
                 Active: false,
             }
-            axios.put(`http://localhost:5000/auth/updateReservation/${id}`, obj)
+            axios.put(`https://server-bike.herokuapp.com/auth/updateReservation/${id}`, obj)
                 .then(res => {
                     console.log(res)
                     UpdateAvailability(BId)

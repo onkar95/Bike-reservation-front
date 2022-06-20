@@ -1,11 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from './component/Dashboard/Home';
-import { useContext } from "react";
 import Login from './component/auth/Login';
 import Register from './component/auth/Register';
 import Navbar from './component/utils/Navbar';
-import DataContext from "./component/context/UserContext";
 import AddBike from "./component/AdminPages/AddBike";
 import EditUser from "./component/common/EditUser";
 import Profile from "./component/common/Profile";
@@ -15,10 +13,8 @@ import Reservation from "./component/common/Reservation";
 import AllBike from "./component/common/AllBikes";
 import AllReservations from "./component/common/AllReservations";
 import EditBike from "./component/AdminPages/EditBike";
-
 function App() {
 
-  const { user } = useContext(DataContext);
 
   return (
     <Router>

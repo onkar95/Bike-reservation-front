@@ -17,7 +17,7 @@ const Rating = ({ BikeRating, Rate, id, active, bikeID ,userID }) => {
         const obj = {
             rating
         }
-        axios.put(`http://localhost:5000/auth/updateReservation2/${id}`, obj)
+        axios.put(`https://server-bike.herokuapp.com/auth/updateReservation2/${id}`, obj)
             .then(res => {
                 console.log(res)
                 setReserveRating(false)
@@ -31,7 +31,7 @@ const Rating = ({ BikeRating, Rate, id, active, bikeID ,userID }) => {
         const dataobj = {
             Rating: rating,
         }
-        axios.put(`http://localhost:5000/auth/updateBike/${bikeID}`, dataobj)
+        axios.put(`https://server-bike.herokuapp.com/auth/updateBike/${bikeID}`, dataobj)
             .then((res) => {
                 console.log(res)
                 setBikeRating(false)

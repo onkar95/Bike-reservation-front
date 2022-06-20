@@ -56,7 +56,7 @@ const Register = () => {
                 name, email, password, Role
             }
             if (validate()) {
-                await axios.post('http://localhost:5000/auth/register', dataobj)
+                await axios.post('https://server-bike.herokuapp.com/auth/register', dataobj)
                     .then((data) => {
                         console.log(data);
                         setData(data.data)

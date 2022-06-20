@@ -21,7 +21,7 @@ const Login = () => {
         setEmailError('');
         setPasswordError('');
         try {
-            const res = await fetch(`http://localhost:5000/auth/login`, {
+            const res = await fetch(`https://server-bike.herokuapp.com/auth/login`, {
                 method: 'POST',
                 credentials: 'include',
                 body: JSON.stringify({ email, password }),
@@ -47,28 +47,28 @@ const Login = () => {
     const Util = {
         sleep: (millis) => new Promise((resolve => setTimeout(resolve, millis)))
     }
-//    const fetchLoggedInUserDetails = async () => {
-//         console.log(`Fetching user details`);
-//         await Util.sleep(2000)
-//         // 20% of the time the function will throw error
-//         if (Math.random() < 0.20) {
-//             console.log(`Fetching user details Failed`)
-//             throw new Error("Unable to fetch logged in user details");
-//         }
+    //    const fetchLoggedInUserDetails = async () => {
+    //         console.log(`Fetching user details`);
+    //         await Util.sleep(2000)
+    //         // 20% of the time the function will throw error
+    //         if (Math.random() < 0.20) {
+    //             console.log(`Fetching user details Failed`)
+    //             throw new Error("Unable to fetch logged in user details");
+    //         }
 
-//         // 50% of the time logged in user details would be admin and 50% of time his role will be regular
+    //         // 50% of the time logged in user details would be admin and 50% of time his role will be regular
 
-//         const user = {
-//             name: faker.name.findName(),
-//             email: faker.internet.email(),
-//             role: Math.random() > 0.5 ? 'user' : 'admin'
-//         }
-//         console.log(`Fetching user details Successful`, {user})
-//         return user;
-//     }
+    //         const user = {
+    //             name: faker.name.findName(),
+    //             email: faker.internet.email(),
+    //             role: Math.random() > 0.5 ? 'user' : 'admin'
+    //         }
+    //         console.log(`Fetching user details Successful`, {user})
+    //         return user;
+    //     }
 
     console.log(user);
-    if (user ) {
+    if (user) {
         return <Navigate to='/' />
     }
 

@@ -15,7 +15,7 @@ const Reservation = () => {
     const UpdateAvailability = async () => {
 
         const dataobj = { Availability: "Not available" }
-        axios.put(`http://localhost:5000/auth/updateBike/${id}`, dataobj)
+        axios.put(`https://server-bike.herokuapp.com/auth/updateBike/${id}`, dataobj)
             .then((res) => {
                 console.log(res)
             })
@@ -34,7 +34,7 @@ const Reservation = () => {
         console.log(Todate)
         if (Datefrom !== "" && Todate !== "") {
 
-            axios.post(`http://localhost:5000/auth/ReserveBike`, obj)
+            axios.post(`https://server-bike.herokuapp.com/auth/ReserveBike`, obj)
                 .then((res) => {
                     console.log(res)
                     UpdateAvailability()

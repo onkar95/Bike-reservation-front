@@ -7,6 +7,7 @@ import { GetAllRestaurant } from '../services/Bikes';
 import "./common.css"
 import Filters from './Filters';
 import RatingComp from './Rating';
+// dotenv.config();
 const AllBike = () => {
   const { user,BikeRating } = useContext(DataContext);
   const [deleted, setdeleted] = useState();
@@ -19,7 +20,7 @@ const AllBike = () => {
 
   async function fetchData() {
     console.log("call")
-    await axios.get('http://localhost:5000/auth/bikes')
+    await axios.get('https://server-bike.herokuapp.com/auth/bikes')
       .then((res) => {
         console.log(res.data)
         setFilteredData(res.data)
@@ -41,7 +42,7 @@ const AllBike = () => {
   const handelDelete = (id) => {
     setdeleted(false)
     if (window.confirm("Do you really want to delete") === true) {
-      axios.delete(`http://localhost:5000/auth/deletebike/${id}`)
+      axios.delete(`https://server-bike.herokuapp.com/auth/deletebike/${id}`)
         .then(res => {
           console.log(res)
           setdeleted(true)

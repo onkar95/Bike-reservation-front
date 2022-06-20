@@ -20,7 +20,7 @@ const EditUser = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            await axios.get(`http://localhost:5000/auth/Singleuser/${id}`)
+            await axios.get(`https://server-bike.herokuapp.com/auth/Singleuser/${id}`)
                 .then((res) => {
                     setName(res.data.name)
                     setEmail(res.data.email)
@@ -65,7 +65,7 @@ const EditUser = () => {
             }
             if (validate()) {
 
-                await axios.put(`http://localhost:5000/auth/updateUser/${id}`, dataobj)
+                await axios.put(`https://server-bike.herokuapp.com/auth/updateUser/${id}`, dataobj)
                     .then((data) => {
                         console.log(data);
                         // setData(data.data)
