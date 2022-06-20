@@ -1,0 +1,17 @@
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paginationItem{
+    direction: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.resta{
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
