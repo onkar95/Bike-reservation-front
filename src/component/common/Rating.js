@@ -60,7 +60,7 @@ const Rating = ({ BikeRating, Rate, id, active, bikeID, userID }) => {
     }
     const check2 = () => {
         const valid = true
-        if (BikeRating && BikeRating === 0) {
+        if (BikeRating === 0 && loc === "/" ) {
             return valid;
         } else {
             return

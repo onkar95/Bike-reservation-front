@@ -127,7 +127,7 @@ const AllBike = () => {
                           <div className="card-body d-flex justify-content-between">
                             <div className='left'>
                               <p className="card-text">Location: {val.Location}</p>
-                              <p className="card-text">  Rating:{val.Rating}</p>
+                              {/* <p className="card-text">  Rating:{val.Rating}</p> */}
                               {
                                 <RatingComp BikeRating={val.Rating} userID={val.UserId} bikeID={val._id}/>
                               }
