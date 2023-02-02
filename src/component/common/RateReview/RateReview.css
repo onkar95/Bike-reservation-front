@@ -1,0 +1,78 @@
+.Review_popup {
+    width: 450px;
+    height: 250px;
+    background-color: #ede9e0;
+    border-radius: 10px;
+    padding: 15px 5px;
+    overflow-y: hidden;
+    position: fixed;
+    top: 30%;
+    bottom: 50%;
+    left: 35%;
+    right: 50%;
+    z-index: 10;
+}
+
+.close_btn {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.review_values {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewCard {
+    flex: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+    border: 1px solid rgba(56, 56, 56, 0.116);
+    width: 25vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vmax;
+    padding: 1vmax 3vmax;
+}
+
+.reviewCard>img {
+    width: 5vmax;
+}
+
+.reviewCard>p {
+    color: rgba(0, 0, 0, 0.836);
+    font: 600 0.9vmax "Roboto";
+}
+
+.reviewCardComment {
+    color: rgba(0, 0, 0, 0.445);
+    font: 300 1vmax cursive;
+}
+
+.review_textArea {
+    padding: 10px 8px;
+    outline: 0px none transparent;
+    border: 0px none transparent;
+    border-radius: 5px;
+    resize: none;
+}
+
+.review_btn {
+    margin-top: 5px;
+    text-decoration: none;
+
+}
+
+
+.rating {
+    margin-bottom: 10px;
+}
+
+.rating_Stars {
+    margin-bottom: 10px;
+}
+
+.star {
+    width: 20px;
+}

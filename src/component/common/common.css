@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginationItem {
+    direction: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.resta {
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AllBikes {
+    /* background-color: rgb(231, 231, 231); */
+
+}
+
+.AllbikesHeader {
+    display: flex;
+    /* margin-top: 60px; */
+    width: 100%;
+}

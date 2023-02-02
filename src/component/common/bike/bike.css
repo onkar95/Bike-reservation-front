@@ -1,0 +1,276 @@
+.AllBikes {
+    display: flex;
+    width: 100%;
+}
+
+.filter_box {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 5px;
+    max-height: max-content;
+
+}
+
+.filter {
+    margin: 5px 15px 10px 2px;
+    padding: 30px 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+    border: 1px solid rgba(56, 56, 56, 0.116);
+
+}
+
+.BikeList {
+    width: 70%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.center_text {
+    display: flex;
+    justify-content: center;
+}
+
+.search_div {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.bike_Map {
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 405px;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+
+.AllbikesHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+.customCard {
+    /* width: 400px; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+    border: 1px solid rgba(56, 56, 56, 0.116);
+    border-radius: 10px;
+    margin: 5px 10px;
+    height: 400px;
+}
+
+.bike_img {
+    width: 100%;
+    height: 200px;
+    padding: 0.1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.buttons {
+    padding: 10px;
+}
+
+.card_info_r1 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+
+}
+
+.card_info_r2 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+}
+
+
+.card_info {
+    display: grid;
+    grid-template-columns: 50% 2;
+    grid-row: auto auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+
+}
+
+
+.bikeDetails {
+    display: flex;
+    width: 98%;
+    padding: 50px 5px;
+}
+
+.bikeDetails_left {
+    width: 70%;
+    /* padding: 10px; */
+    border-right: 1px solid black;
+}
+
+.bikeDetails_img_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bikeDetails_img {
+    width: 60%;
+    border-radius: 10px;
+    height: 40%;
+}
+
+.bikeDetails_data {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.bikeDetails_data_div1,
+.bikeDetails_data_div2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.bikeDetails_data_div1 p,
+.bikeDetails_data_div2 p {
+    margin: 10px;
+}
+
+
+
+.rating_text {
+    display: flex;
+}
+
+.rating_text b {
+    width: max-content;
+}
+
+.reserve_btn_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.bikeDetails_discription {
+    padding: 10px 100px;
+
+}
+
+.bikeDetails_discription p {
+    font: 300 cursive;
+}
+
+.bikeDetails_discription b {
+    font-size: larger;
+}
+
+.bikeDetails_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30%;
+    /* padding: 15px; */
+
+}
+
+.center_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* height: 80vh; */
+}
+
+.allBikes_filter {
+    display: flex;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .filter_box {
+        width: 50%;
+    }
+
+    /* .rating_text {
+        display: block;
+    } */
+    .bikeDetails_data {
+        padding: 40px 10px 10px 10px;
+    }
+
+    .bikeDetails_img {
+        width: 70%;
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .filter_box {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    .bikeDetails_discription {
+        padding: 10px 30px;
+    }
+
+    .bikeDetails_discription p {
+        font-size: 1.8vmax;
+    }
+
+    .filter_box {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bikeDetails_discription {
+        padding: 10px;
+    }
+
+    .bikeDetails_left {
+        border: none;
+    }
+
+    .bikeDetails,
+    .bikeDetails_data {
+        display: block;
+    }
+
+    .bikeDetails_data_div2,
+    .bikeDetails_data_div1,
+    .BikeList,
+    .bikeDetails_left,
+    .bikeDetails_right {
+        width: 100%;
+    }
+
+
+    .filter_box {
+        display: none;
+    }
+}

@@ -1,0 +1,10 @@
+.Customtable {
+    border: 1px solid black;
+    width: 98% !important;
+    margin: 1%;
+    padding: 5px;
+}
+
+.home {
+    background-color: rgb(231, 231, 231);
+}
