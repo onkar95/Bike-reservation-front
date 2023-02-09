@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import bike from '../../../Assets/download.jpg'
+import bike1 from '../../../Assets/download.jpg'
+import bike2 from '../../../Assets/ktm.jpg'
+import bike3 from '../../../Assets/bike.jpg'
+
 import { deletebike } from '../../../Redux/Actions/BikeAction';
 import { getAllReservationsOnBikes } from '../../../Redux/Actions/ReservationAction';
 import RateImg from '../RateReview/RateImg';
@@ -32,6 +35,10 @@ export default function BikeCard({ val, key }) {
             dispatch(deletebike({ id }))
         }
     }
+
+    const images = [bike1, bike2, bike3]
+
+    const randomimg = images[Math.floor(Math.random() * images.length)];
     return (
 
 
@@ -39,7 +46,7 @@ export default function BikeCard({ val, key }) {
         <div id={key}>
 
             <div className="customCard" >
-                <img className='bike_img' src={bike} alt='on' />
+                <img className='bike_img' src={randomimg} alt='on' />
                 <div className='card_info'>
                     <div className='card_info_r1'>
                         <p className="card-text"><h5 className=" fw-bold">{val.Model}</h5></p>
