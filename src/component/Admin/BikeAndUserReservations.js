@@ -7,19 +7,10 @@ import { getAllReservationsByUsers, getAllReservationsOnBikes } from '../../Redu
 import '../../Screens/Screen.css'
 
 
-const BikeReservations = ({reservData}) => {
+const BikeReservations = ({ reservDataManager }) => {
 
-    const { id } = useParams()
-    const dispatch = useDispatch()
-
-    const { userInfo: user, loading: userloading } = useSelector(state => state.user)
-    const { userReservations, bikeReservations, loading, cancledReservation, loadingR } = useSelector(state => state.reserve)
-
-    let reservData1 = []
-    reservData1 = userReservations?.length === 0 ? bikeReservations : userReservations
-
-
-
+    const { loading: userloading } = useSelector(state => state.user)
+    const { loading, loadingR } = useSelector(state => state.reserve)
 
     return (
         <div>
@@ -39,8 +30,8 @@ const BikeReservations = ({reservData}) => {
                         </thead>
                         <tbody>
 
-                            {reservData && reservData?.length !== 0 ?
-                                reservData?.map((val, key) => (
+                            {reservDataManager && reservDataManager?.length !== 0 ?
+                                reservDataManager?.map((val, key) => (
 
                                     <tr id={key}>
                                         <td >{key + 1}</td>

@@ -10,12 +10,12 @@ import '../../Screens/Screen.css'
 const UserReservations = ({ reservData }) => {
     const { id } = useParams()
     const dispatch = useDispatch()
-    
+
     const { userInfo: user, loading: userloading } = useSelector(state => state.user)
     const { userReservations, loading, cancledReservation, loadingR } = useSelector(state => state.reserve)
     const { bikeReserved } = useSelector(state => state.bike)
-    console.log("userReservations",userReservations)
-    console.log("reservData",reservData)
+    console.log("userReservations", userReservations)
+    console.log("reservData", reservData)
 
     // let [reservData, setreservData] = useState([])
 

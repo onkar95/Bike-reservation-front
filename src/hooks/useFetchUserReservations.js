@@ -6,12 +6,7 @@ import { resetVariables } from '../Redux/Reducers/ReservSlice'
 
 const useFetchUserReservations = ({ id }) => {
 
-
-    console.log(id)
-
-
     const dispatch = useDispatch()
-
 
     const { userInfo: user, loading: userloading } = useSelector(state => state.user)
     const { userReservations, cancledReservation, ReservationsFetched } = useSelector(state => state.reserve)
@@ -36,7 +31,6 @@ const useFetchUserReservations = ({ id }) => {
             setreservData([])
         }
     }, [userReservations, user]);
-
 
 
     return { reservData, userReservations }

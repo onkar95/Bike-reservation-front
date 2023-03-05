@@ -20,7 +20,7 @@ export const getAllReservations = createAsyncThunk(
 
 )
 export const getAllReservationsByUsers = createAsyncThunk(
-    'bike/Reservations/user',
+    'user/Reservations',
     async ({ id }, { rejectWithValue }) => {
         try {
             const { data } = await axios.get(`/reserve/userReservations/${id}`)
@@ -36,12 +36,10 @@ export const getAllReservationsByUsers = createAsyncThunk(
 
 )
 export const getAllReservationsOnBikes = createAsyncThunk(
-    'bike/Reservations/bike',
+    'bike/Reservations',
     async ({ id }, { rejectWithValue }) => {
         try {
-            console.log("id", id)
             const { data } = await axios.get(`/reserve/manager/bikeReservations/${id}`)
-            console.log(data)
             return data;
         } catch (error) {
             if (error.response && error.response.data.message) {
